@@ -220,3 +220,6 @@ override_doctype_class = {
 fixtures = [
     "Customer"
 ]
+
+#before_migrate = "layby.migrate.before_migrate"
+after_migrate = "layby.migrate.after_migrate"

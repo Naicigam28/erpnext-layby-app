@@ -46,16 +46,5 @@
         "insert_after": "passport_number",
         "mandatory_depends_on": "eval:doc.id_or_passport == 'Passport'",
         "hidden_depends_on": "eval:doc.id_or_passport == 'South African ID'"
-    },
-    {
-        "doctype": "Custom Field",
-        "dt": "Customer",
-        "module": "Layby",
-        "name": "allow_layby",
-        "fieldname": "allow_layby",
-        "fieldtype": "Check",
-        "label": "Allow Layby",
-        "insert_after": "",
-        "is_virtual": true
     }
 ]
