@@ -1,0 +1,61 @@
+[
+    {
+        "doctype": "Custom Field",
+        "dt": "Customer",
+        "module": "Layby",
+        "name": "ID or Passport",
+        "fieldname": "id_or_passport",
+        "fieldtype": "Select",
+        "options": "South African ID\nPassport",
+        "label": "ID or Passport",
+        "insert_after": "customer_group",
+        "reqd": true
+    },
+    {
+        "doctype": "Custom Field",
+        "dt": "Customer",
+        "module": "Layby",
+        "name": "ID Number",
+        "fieldname": "id_number",
+        "fieldtype": "Data",
+        "label": "RSA ID Number",
+        "insert_after": "id_or_passport",
+        "mandatory_depends_on": "eval:doc.id_or_passport == 'South African ID'",
+        "hidden_depends_on": "eval:doc.id_or_passport == 'Passport'"
+    },
+    {
+        "doctype": "Custom Field",
+        "dt": "Customer",
+        "module": "Layby",
+        "name": "Passport Number",
+        "fieldname": "passport_number",
+        "fieldtype": "Data",
+        "label": "Passport Number",
+        "insert_after": "id_number",
+        "mandatory_depends_on": "eval:doc.id_or_passport == 'Passport'",
+        "hidden_depends_on": "eval:doc.id_or_passport == 'South African ID'"
+    },
+    {
+        "doctype": "Custom Field",
+        "dt": "Customer",
+        "module": "Layby",
+        "name": "passport_country",
+        "fieldname": "passport_country",
+        "fieldtype": "Data",
+        "label": "Passport Country",
+        "insert_after": "passport_number",
+        "mandatory_depends_on": "eval:doc.id_or_passport == 'Passport'",
+        "hidden_depends_on": "eval:doc.id_or_passport == 'South African ID'"
+    },
+    {
+        "doctype": "Custom Field",
+        "dt": "Customer",
+        "module": "Layby",
+        "name": "allow_layby",
+        "fieldname": "allow_layby",
+        "fieldtype": "Check",
+        "label": "Allow Layby",
+        "insert_after": "",
+        "is_virtual": true
+    }
+]

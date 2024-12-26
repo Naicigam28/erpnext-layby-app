@@ -112,6 +112,10 @@ app_license = "MIT"
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
+override_doctype_class = {
+    #/frappe-bench/apps/layby/layby/layby/doctype/customer/customer.py
+	"Customer": "layby.overrides.customer.LaybyCustomer"
+}
 # Document Events
 # ---------------
 # Hook on document methods and events
@@ -213,3 +217,6 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"layby.auth.validate"
 # ]
+fixtures = [
+    "Customer"
+]
